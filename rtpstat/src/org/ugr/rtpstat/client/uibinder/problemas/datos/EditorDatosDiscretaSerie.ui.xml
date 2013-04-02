@@ -1,0 +1,9 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:rtpstat="urn:import:org.ugr.rtpstat.client.uibinder">
+	<ui:style>
+		
+	</ui:style>
+	<rtpstat:TablaDinamica ui:field="tabla" visible="false" minRows="2"></rtpstat:TablaDinamica>
+</ui:UiBinder> 

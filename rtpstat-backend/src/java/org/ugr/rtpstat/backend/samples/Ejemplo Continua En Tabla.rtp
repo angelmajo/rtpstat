@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problema>
+    <descripcion>
+        Ejemplo de funcionamiento con datos en tabla de una variable continua
+    </descripcion>
+    <cabecera>
+    		La distribución de la edad de 150 enfermos de cáncer está dada por
+    </cabecera>
+    <descripcion_variable>
+        Edad
+    </descripcion_variable>
+    <tipo_variable>
+        Continua
+    </tipo_variable>
+    <organizacion_datos>
+        Tabla
+    </organizacion_datos>     
+    <apartados>
+        <apartado>
+            <enunciado>
+                Calcula la edad más común de los enfermos.
+            </enunciado>
+            <calculos>
+                Mo(X)
+            </calculos>
+        </apartado>
+        <apartado>
+            <enunciado>
+                Determina la mediana y cuantifica la dispersión en torno a ella.
+            </enunciado>
+            <calculos>
+                Me(X), DMe(X)
+            </calculos>
+            </apartado>
+        <apartado>
+            <enunciado>
+                ¿Cuál es la edad mínima y máxima del 30% central de los individuos? ¿Y la edad máxima del 8% de los individuos más jóvenes?
+            </enunciado>
+            <calculos>
+                P35(X), P65(X), P8(X)
+            </calculos>            
+        </apartado>
+        <apartado>
+                <enunciado>
+                    Calcula el recorrido intercuartílico y la desviación típica.
+                </enunciado>
+                <calculos>
+                    RI(X), Sd(X)
+                </calculos>
+        </apartado>
+        <apartado>
+             		<enunciado>
+                    ¿Es moderadamente asimétrica la distribución? Cuantifica su curtosis.
+                </enunciado>
+                <calculos>
+                    Gamma1(X), Gamma2(X)
+                </calculos>
+        </apartado> 
+    </apartados>
+    <notas>
+    		<nota>
+        Recuerde utilizar siempre una precisión mínima de 4 cifras decimales en sus cálculos.
+        </nota>        
+    </notas>
+</problema>

@@ -1,0 +1,90 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:r="urn:import:org.ugr.rtpstat.client.uibinder">
+	<ui:style>
+		.paddingLeft {
+			padding-left: 0.5em;
+		}
+		
+		.totalWidth {
+			width: 99%;
+			max-width: 99%;
+		}
+		
+		.floatLeft {
+			
+		}
+		
+		.disabledMenuItem {
+			color: #efefef !important;
+		}
+		
+		.textoGris {
+			color: gray;
+		}
+		
+		.superior {
+			
+		}
+	</ui:style>
+	<g:DockLayoutPanel unit="EM">
+		<g:north size="4">
+			<g:HTMLPanel addStyleNames="{style.superior} {style.paddingLeft}">
+				<div>
+					Título:
+								</div>
+				<div>
+					<g:TextBox ui:field="titulo" addStyleNames="{style.totalWidth}" />
+				</div>
+
+			</g:HTMLPanel>
+		</g:north>
+		<g:center>
+			<g:StackLayoutPanel unit="EM">
+				<g:stack>
+					<g:customHeader size="3">
+						<g:HTMLPanel>
+							<table width="100%">
+								<col width="200px"></col>
+								<tr>
+									<td>
+										<g:PushButton>Problemas resueltos</g:PushButton>
+									</td>
+									<td>
+										<r:AdvancedTextBox ui:field="titulo_resueltos"
+											mensaje="Título de la sección: Problemas resueltos"
+											mensajeStyle="{style.textoGris}" addStyleNames="{style.totalWidth}" />
+									</td>
+								</tr>
+							</table>
+						</g:HTMLPanel>
+					</g:customHeader>
+					<g:FlowPanel ui:field="lista_problemas_resueltos"
+						width="100%" />
+
+				</g:stack>
+				<g:stack>
+					<g:customHeader size="3">
+						<g:HTMLPanel>
+							<table width="100%">
+								<col width="200px"></col>
+								<tr>
+									<td>
+										<g:PushButton>Problemas propuestos</g:PushButton>
+									</td>
+									<td>
+										<r:AdvancedTextBox ui:field="titulo_propuestos"
+											mensaje="Título de la sección: Problemas propuestos"
+											mensajeStyle="{style.textoGris}" addStyleNames="{style.totalWidth}" />
+									</td>
+								</tr>
+							</table>
+						</g:HTMLPanel>
+					</g:customHeader>
+					<g:FlowPanel ui:field="lista_problemas_propuestos"
+						width="100%" />
+				</g:stack>
+			</g:StackLayoutPanel>
+		</g:center>
+	</g:DockLayoutPanel>
+</ui:UiBinder> 

@@ -1,0 +1,47 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style type="org.ugr.rtpstat.publico.client.BotonNavegacion.MiCss">
+		.boton {
+			text-align: center;
+			margin: 0.2em;
+		}
+		
+		.activo {
+			-moz-border-radius: 0;
+			-webkit-border-radius: 0;
+			margin-right: 0;
+			margin-left: 0;
+			background-color: gray;
+			color: white !important;
+			text-decoration: none;
+		}
+		
+		.inactivo {
+			-moz-border-radius-bottomleft: 2em;
+			-moz-border-radius-bottomright: 1em;
+			-moz-border-radius-topleft: 1em;
+			-moz-border-radius-topright: 2em;
+			-webkit-border-bottom-left-radius: 2em 2em;
+			-webkit-border-bottom-right-radius: 1em 1em;
+			-webkit-border-top-left-radius: 1em 1em;
+			-webkit-border-top-right-radius: 2em 2em;
+			background: #D82921 none repeat scroll 0 0;
+			color: #DDDDDD;
+			text-shadow: 0.05em 0.05em 0.3em black;
+		}
+		
+		.inactivo:HOVER {
+			text-shadow: 0.05em 0.05em 0.3em #DDDDDD;
+			color: black;
+		}
+		
+		.inactivo a {
+			color: white;
+			text-decoration: none;
+		}
+	</ui:style>
+	<g:HTMLPanel ui:styleName="{style.boton}" ui:field="panel">
+		<g:Hyperlink ui:field="enlace" addStyleNames="{style.inactivo}" />
+		<g:Label ui:field="etiqueta" addStyleNames="{style.activo}" />
+	</g:HTMLPanel>
+</ui:UiBinder> 

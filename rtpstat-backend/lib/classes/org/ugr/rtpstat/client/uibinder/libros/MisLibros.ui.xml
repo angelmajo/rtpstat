@@ -1,0 +1,39 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p="urn:import:org.ugr.rtpstat.client.uibinder.principal">
+	<ui:style>
+		.nuevo_libro {
+			margin-left: auto;
+			margin-right: auto;
+			width: 20em;
+		}
+		
+		.cargando_libros {
+			left: 1em;
+			position: absolute;
+			top: 0;
+		}
+		
+		.imagen_loader {
+			vertical-align: middle;
+		}
+	</ui:style>
+	<g:DockLayoutPanel unit="EM">
+		<g:north size="2">
+			<g:FlowPanel>
+				<p:BotonNavegacion token="nuevo_libro"
+					textoEnlace="Crear un nuevo libro de problemas" addStyleNames="{style.nuevo_libro}"></p:BotonNavegacion>
+				<g:HTMLPanel ui:field="cargando_libros" visible="false"
+					addStyleNames="{style.cargando_libros}">
+					<g:Image ui:field="imagen_loader" addStyleNames="{style.imagen_loader}" />
+					Cargando libros...
+				</g:HTMLPanel>
+			</g:FlowPanel>
+		</g:north>
+		<g:center>
+			<g:ScrollPanel>
+				<g:FlowPanel ui:field="panel_lista" width="100%" />
+			</g:ScrollPanel>
+		</g:center>
+	</g:DockLayoutPanel>
+</ui:UiBinder> 

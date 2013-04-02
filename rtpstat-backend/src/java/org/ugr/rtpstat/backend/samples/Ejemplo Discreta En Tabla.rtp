@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problema>
+    <descripcion>
+        Ejemplo de funcionamiento con datos tabulados de una variable discreta
+    </descripcion>
+    <cabecera>
+    		En una determinada empresa se realiza un estudio sobre la calidad de su producción. La distribución siguiente informa sobre el número de piezas defectuosas encontradas en 100 cajas
+				examinadas con 50 unidades cada una de ellas:
+    </cabecera>
+    <descripcion_variable>
+        Número de piezas defectuosas en una caja de 50 unidades
+    </descripcion_variable>
+    <tipo_variable>
+        Discreta
+    </tipo_variable>
+    <organizacion_datos>
+        Tabla
+    </organizacion_datos>
+    <cabecera2>
+    </cabecera2>    
+    <apartados>
+        <apartado>
+            <enunciado>
+                Calcular el número medio de piezas defectuosas por caja.
+            </enunciado>
+            <calculos>
+                m1(X)
+            </calculos>
+        </apartado>        
+        <apartado>
+                <enunciado>
+                    ¿Cuantas piezas defectuosas se encuentran habitualmente en las cajas examinadas?
+                </enunciado>
+                <calculos>
+                    Mo(X)
+                </calculos>
+        </apartado>
+        <apartado>
+             		<enunciado>
+                    ¿Cuál es el número mediano de piezas defectuosas por caja?
+                </enunciado>
+                <calculos>
+                    Me(X)
+                </calculos>
+        </apartado> 
+        <apartado>
+            <enunciado>
+                Calcular e interpretar:
+            </enunciado>
+            <subapartados>
+                <subapartado>
+                    <enunciado>
+                        Los cuartiles de la distribución.
+                    </enunciado>
+                    <calculos>
+                        Q1(X), Me(X), Q3(X)
+                    </calculos>
+                </subapartado>
+                <subapartado>
+                    <enunciado>
+                        Los deciles de órdenes 4 y 7 de la distribución.
+                    </enunciado>
+                    <calculos>
+                        D4(X), D7(X)
+                    </calculos>
+                </subapartado>
+                <subapartado>
+                    <enunciado>
+                        El percentil 4.
+                    </enunciado>
+                    <calculos>
+                        P4(X)
+                    </calculos>
+                </subapartado>
+                <subapartado>
+                    <enunciado>
+                        La proporción de cajas con menos de 5 piezas defectuosas.
+                    </enunciado>
+                    <calculos>
+                        Fx(4)
+                    </calculos>
+                </subapartado>
+            </subapartados>
+        </apartado> 
+        <apartado>
+            <enunciado>
+                Cuantificar la dispersión de la distribución utilizando diferentes medidas, interpretando los resultados.
+            </enunciado>
+            <calculos>
+                R(X), RI(X), Dm1(X), Var(X)
+            </calculos>
+        </apartado>       
+    </apartados>
+</problema>

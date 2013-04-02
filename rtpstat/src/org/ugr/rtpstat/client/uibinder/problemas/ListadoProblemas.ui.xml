@@ -1,0 +1,45 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:rtpstat="urn:import:org.ugr.rtpstat.client.uibinder">
+	<ui:style>
+		.mensaje {
+			width: 100%;
+			text-align: center;
+			padding-top: 4em;
+		}
+		
+		.mensajeListaVacia {
+			-moz-border-radius: 2em;
+			-webkit-border-radius: 2em;
+			border-radius: 2em;
+			padding: 1em;
+			border-color: gray black black;
+			border-style: groove groove dotted;
+			border-width: 1px 2px 3px;
+			background: #eee;
+			margin: 2em;
+			text-align: center;
+		}
+		
+		.mensajeCargando {
+			text-align: center;
+			padding-top: 4em;
+		}
+		
+		.imagenSpinWheel {
+			vertical-align: middle;
+		}
+		.panelProblemas {
+			padding-top: 0.5em;	
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:HTMLPanel ui:field="mensajeListaVacia" addStyleNames="{style.mensajeListaVacia}" visible="false">
+			<g:InlineLabel>¡Todavia no has creado
+				ningún problema!</g:InlineLabel>
+			<g:Hyperlink targetHistoryToken="crear_problema">Prueba a
+				crear uno...</g:Hyperlink>
+		</g:HTMLPanel>
+		<g:VerticalPanel ui:field="panelProblemas" addStyleNames="{style.panelProblemas}" width="100%" />
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,32 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.borde_inferior {
+			border-top: 1px dashed gray;
+			border-bottom: 1px dashed gray;
+		}
+		
+		.boton_aplicar {
+			float: right;
+			height:1.6em;
+		}
+	</ui:style>
+	<g:HTMLPanel width="100%" addStyleNames="{style.borde_inferior}">
+		<table width="100%">
+			<tr>
+				<td>
+					<g:InlineLabel>Nombre real:</g:InlineLabel>
+					<g:InlineLabel ui:field="nombre_real"></g:InlineLabel>
+					<br />
+					<g:InlineLabel>Organización:</g:InlineLabel>
+					<g:InlineLabel ui:field="organizacion"></g:InlineLabel>
+				</td>
+				<td align="right">
+					<g:ListBox ui:field="rol"></g:ListBox>
+					<g:PushButton ui:field="boton_aplicar" addStyleNames="{style.boton_aplicar}" visible="false" title="Click aquí para confirmar el cambio de Rol"></g:PushButton>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

@@ -1,0 +1,53 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.aviso {
+			background-color: #DDDDFF;
+			color: blue;
+			border: 1px solid #3333FF;
+			padding: 0.5em;
+			text-align: center;
+			-moz-border-radius: 0.25em;
+			-webkit-border-radius: 0.25em;
+			border-radius: 0.25em;
+			font-variant: small-caps;
+			margin: 0.5em;
+		}
+		
+		.cabecera {
+			text-align: center;
+			font-size: 1em;
+			font-variant: small-caps;
+		}
+		
+		.mensajeCargando {
+			text-align:center;
+		}
+		
+		.imagenSpinWheel {
+			vertical-align: middle;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:HTMLPanel ui:field="cargandoListado" addStyleNames="{style.mensajeCargando}"
+			visible="false">
+			<g:Image ui:field="spinWheel" addStyleNames="{style.imagenSpinWheel}" />
+			<g:InlineLabel>Cargando problemas...</g:InlineLabel>
+		</g:HTMLPanel>
+		<g:Label addStyleNames="{style.aviso}">¡Recuerda que todos los cambios de Rol
+			se notifican al usuario correspondiente por e-mail!</g:Label>
+		<g:DisclosurePanel width="100%"
+			ui:field="panel_listado_por_autorizar">
+			<g:header>
+				Listado de usuarios pendientes de aprobación
+				</g:header>
+			<g:VerticalPanel ui:field="listado_por_autorizar"
+				width="98%"></g:VerticalPanel>
+		</g:DisclosurePanel>
+		<g:DisclosurePanel width="100%" ui:field="panel_listado_resto">
+			<g:header>Resto de usuarios</g:header>
+			<g:VerticalPanel ui:field="listado_resto" width="98%"></g:VerticalPanel>
+		</g:DisclosurePanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

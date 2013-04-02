@@ -1,0 +1,13 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.cuando {
+			font-size: 0.5em;
+			border-top: solid 1px;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:HTML ui:field="cuando" addStyleNames="{style.cuando}" />
+		<g:HTML ui:field="panelMensaje" />
+	</g:HTMLPanel>
+</ui:UiBinder> 

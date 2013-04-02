@@ -1,0 +1,42 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.contenedor {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+			padding: 0.3em;
+			border-style: dotted;
+			border-width: 2px 2px 0 0;
+			-moz-border-radius-topright: 0.7em;
+			background-color: beige;
+		}
+		
+		.warning {
+			color: #D82921;
+			border-color: #D82921;
+		}
+		
+		.info {
+			color: #29D821;
+			border-color: #29D821;
+		}
+		
+		.pointer {
+			cursor: pointer;
+		}
+		
+		.alignRight {
+			text-align: right;
+		}
+		
+		.maxSize {
+			max-height: 10em;
+			max-width: 40em;
+		}
+	</ui:style>
+	<g:VerticalPanel ui:field="panelExterno" addStyleNames="{style.contenedor}" visible="false">
+		<g:HTML ui:field="mensaje" />
+	</g:VerticalPanel>
+</ui:UiBinder> 

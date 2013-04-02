@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.clickFuera {
+			background: #444444 none repeat scroll 0 0;
+			color: white;
+			font-size: 0.7em;
+			text-align: right;
+			padding: 0.2em;
+			margin-top: 0.5em;
+		}
+	</ui:style>
+	<g:VerticalPanel>
+		<g:Label ui:field="mensaje"></g:Label>
+		<g:Label addStyleNames="{style.clickFuera}">Haga click fuera de este dialogo para
+			cerrarlo</g:Label>
+	</g:VerticalPanel>
+</ui:UiBinder> 

@@ -1,0 +1,127 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style
+		type="org.ugr.rtpstat.client.uibinder.problemas.ProblemaEnListado.Estilos">
+			.OK {
+				color: green;
+			}
+			
+			.GENERANDO {
+				color: #FF7F00;
+			}
+			
+			.ERROR {
+				color: red;
+			}
+			
+			.DESCONOCIDO {
+				color: blue;
+			}
+			
+			.descripcion {
+				padding-left: 1em;
+				padding-right: 1em;
+				text-align: justify;
+			}
+			
+			.dificultad {
+				-moz-border-radius: 1em;
+				display: inline;
+				font-size: 0.65em;
+				font-weight: bold;
+				margin-left: 1em;
+				margin-right: 1em;
+				margin-top: 0.25em;
+				padding: 0.2em 1em;
+				text-transform: uppercase;
+				width: 7em;
+				text-align: center;
+				float: left;
+			}
+			
+			.muyFacil {
+				background: #005500 none repeat scroll 0 0;
+				color: white;
+			}
+			
+			.facil {
+				background: #44BB00 none repeat scroll 0 0;
+				color: white;
+			}
+			
+			.intermedio {
+				background: #888800 none repeat scroll 0 0;
+				color: white;
+			}
+			
+			.dificil {
+				background: #BB4400 none repeat scroll 0 0;
+				color: white;
+			}
+			
+			.muyDificil {
+				background: #BB0000 none repeat scroll 0 0;
+				color: white;
+			}
+			
+			.cursorMano {
+				cursor: pointer;
+			}
+			
+			.areas {
+				float: right;
+				color: #055550;
+				font-size: 0.8em;
+			}
+			.boton {
+				float: left;
+				margin-top: 0.15em;
+			}
+			
+			.panel {
+				border-top: 1px solid gray;
+				border-bottom: 1px solid gray;
+				margin-bottom: -1px;
+				min-height: 3em;
+				padding-left: 1em;
+				padding-right: 1em;
+			}
+			
+			.panel:HOVER {
+				background-color: #f1f1f1;
+			}
+		</ui:style>
+	<g:HTMLPanel addStyleNames="{style.panel}">
+		<table width="100%">
+			<tr>
+				<td width="80px">
+					<g:HorizontalPanel ui:field="panel">
+						<g:PushButton ui:field="editarProblema" title="Editar problema" />
+						<g:PushButton ui:field="duplicarProblema" title="Duplicar problema" />
+						<g:PushButton ui:field="descargarDocumento" title="Descargar problema" />
+						<g:PushButton ui:field="iconoGenerando" visible="false"
+							enabled="false" />
+						<g:PushButton ui:field="iconoEstadoDesconocido"
+							visible="false" enabled="false" />
+						<g:PushButton ui:field="detallesError" visible="false"
+							addStyleNames="{style.cursorMano}" />
+					</g:HorizontalPanel>
+				</td>
+				<td width="100%">
+					<g:Label ui:field="dificultad" addStyleNames="{style.dificultad}" />
+					<g:Label ui:field="descripcion" addStyleNames="{style.descripcion}" />
+				</td>
+				<td width="30px">
+					<g:PushButton ui:field="eliminarProblema" title="Eliminar problema" />
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<g:Label ui:field="areas" addStyleNames="{style.areas}" />
+				</td>
+			</tr>
+		</table>
+
+	</g:HTMLPanel>
+</ui:UiBinder> 

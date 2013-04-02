@@ -1,0 +1,35 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:rtpstat="urn:import:org.ugr.rtpstat.client.uibinder">
+	<ui:style>
+		
+	</ui:style>
+	<g:VerticalPanel>
+		<g:cell horizontalAlignment="ALIGN_CENTER">
+			<g:HorizontalPanel spacing="6" addStyleNames="campo">
+				<g:Label>Amplitud de los intervalos:</g:Label>
+				<g:RadioButton name="amplitud" ui:field="constante">Constante</g:RadioButton>
+				<g:RadioButton name="amplitud" ui:field="variable">Variable</g:RadioButton>
+			</g:HorizontalPanel>
+		</g:cell>
+		<rtpstat:TablaDinamica ui:field="tablaIntervalosVariables" visible="false" width="100%" minRows="2"></rtpstat:TablaDinamica>
+		<g:VerticalPanel ui:field="constante_panel" visible="false" width="100%" spacing="5">
+			<g:HorizontalPanel width="100%">
+				<g:cell width="12em">
+					<g:Label width="17em">Amplitud de los intervalos</g:Label>
+				</g:cell>
+				<g:cell width="100%">
+					<rtpstat:NumberTextBox ui:field="const_amplitud" width="98%" />
+				</g:cell>
+			</g:HorizontalPanel>
+			<g:HorizontalPanel width="100%">
+				<g:cell width="12em">
+					<g:Label width="17em">Extremo inferior del primer intervalo</g:Label>
+				</g:cell>
+				<g:cell width="100%">
+					<rtpstat:NumberTextBox ui:field="const_primero" width="98%" />
+				</g:cell>
+			</g:HorizontalPanel>
+		</g:VerticalPanel>
+	</g:VerticalPanel>
+</ui:UiBinder> 

@@ -1,0 +1,47 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.ajax_loader {
+			vertical-align: middle;
+		}
+		
+		.estas_seguro {
+			text-align: right;
+			font-size: 1em;
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:FlowPanel>
+		<g:HTMLPanel ui:field="panel_cargando">
+			<g:Image ui:field="ajax_loader" addStyleNames="{style.ajax_loader}" />
+			Espera un momento...
+		</g:HTMLPanel>
+		<g:FlowPanel ui:field="panel_resto" visible="false">
+			<g:HTML ui:field="mensaje" />
+			<g:FlowPanel ui:field="panel_relaciones" visible="false">
+				<g:Label>Relaciones de Problemas:</g:Label>
+				<g:ListBox visibleItemCount="10" ui:field="nombres_relaciones"
+					width="100%"></g:ListBox>
+			</g:FlowPanel>
+			<g:FlowPanel ui:field="panel_libros" visible="false">
+				<g:Label>Libros:</g:Label>
+				<g:ListBox visibleItemCount="10" ui:field="nombres_libros"
+					width="100%"></g:ListBox>
+			</g:FlowPanel>
+			<g:Label addStyleNames="{style.estas_seguro}">¿Estás seguro?</g:Label>
+			<g:HTMLPanel>
+				<table width="100%">
+					<tr>
+						<td align="left">
+							<g:Anchor ui:field="cancelar">cancelar</g:Anchor>
+						</td>
+						<td align="right">
+							<g:Button ui:field="confirmar">Confirmar</g:Button>
+						</td>
+					</tr>
+				</table>
+			</g:HTMLPanel>
+		</g:FlowPanel>
+	</g:FlowPanel>
+</ui:UiBinder> 

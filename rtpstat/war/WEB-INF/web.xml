@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app
+    PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+    "http://java.sun.com/dtd/web-app_2_3.dtd">
+
+<web-app>
+	<!-- Servlets -->
+	<servlet>
+		<servlet-name>rtpstatServlet</servlet-name>
+		<servlet-class>org.ugr.rtpstat.server.RtpstatServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>rtpstatServlet</servlet-name>
+		<url-pattern>/rtpstat/service</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>publicoServlet</servlet-name>
+		<servlet-class>org.ugr.rtpstat.server.PublicoServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>publicoServlet</servlet-name>
+		<url-pattern>/publico/service</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>downloadServlet</servlet-name>
+		<servlet-class>org.ugr.rtpstat.server.DownloadDocumentos</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>downloadServlet</servlet-name>
+		<url-pattern>/rtpstat/download</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>validTokenServlet</servlet-name>
+		<servlet-class>org.ugr.rtpstat.server.ValidTokens</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>validTokenServlet</servlet-name>
+		<url-pattern>/validTokens</url-pattern>
+	</servlet-mapping>
+	
+	
+
+	<!-- Páginas que requieren Login -->
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>Login required</web-resource-name>
+			<url-pattern>/frontend/*</url-pattern>
+			<url-pattern>/rtpstat/service</url-pattern>
+			<url-pattern>/rtpstat/download</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>*</role-name>
+		</auth-constraint>
+	</security-constraint>
+	
+	<!-- AppStats -->
+	<filter>
+		<filter-name>appstats</filter-name>
+		<filter-class>com.google.appengine.tools.appstats.AppstatsFilter</filter-class>
+		<init-param>
+			<param-name>logMessage</param-name>
+			<param-value>Appstats available: /appstats/details?time={ID}</param-value>
+		</init-param>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>appstats</filter-name>
+		<url-pattern>/rtpstat/*</url-pattern>
+	</filter-mapping>
+	
+	<servlet>
+		<servlet-name>appstats</servlet-name>
+		<servlet-class>com.google.appengine.tools.appstats.AppstatsServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>appstats</servlet-name>
+		<url-pattern>/appstats/*</url-pattern>
+	</servlet-mapping>
+
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>AppStats</web-resource-name>
+			<url-pattern>/appstats/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>admin</role-name>
+		</auth-constraint>
+	</security-constraint>
+
+	<!-- Página de inicio -->
+	<welcome-file-list>
+		<welcome-file>Publico.html</welcome-file>
+	</welcome-file-list>
+</web-app>

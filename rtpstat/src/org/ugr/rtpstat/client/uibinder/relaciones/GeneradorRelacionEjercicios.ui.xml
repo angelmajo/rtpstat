@@ -1,0 +1,42 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:relaciones="urn:import:org.ugr.rtpstat.client.uibinder.relaciones">
+	<ui:style>
+		.anchoTotal {
+			width: 100%;
+		}
+		
+		.anchoTotal2 {
+			width: 98%;
+		}
+		
+		.label {
+			
+		}
+		
+		.generarAutomaticamenteButtons {
+			padding-right: 0.2em;
+		}
+	</ui:style>
+	<g:ScrollPanel>
+		<g:VerticalPanel spacing="10" addStyleNames="{style.anchoTotal}">
+			<g:HTMLPanel>
+				<g:InlineLabel addStyleNames="{style.label}">¿Cual es el título de esta relación?:</g:InlineLabel>
+				<g:TextBox addStyleNames="{style.anchoTotal2}" ui:field="titulo"></g:TextBox>
+			</g:HTMLPanel>
+			<g:HTMLPanel>
+				<g:InlineLabel addStyleNames="{style.label}">Elije el tipo de relación que quieres:</g:InlineLabel>
+				<g:ListBox addStyleNames="{style.anchoTotal2}" ui:field="tipo"></g:ListBox>
+			</g:HTMLPanel>
+			<g:HTMLPanel>
+				<g:InlineLabel>¿Deseas generar la relación de problemas de forma automática? (Después podrás editarla):</g:InlineLabel>
+				<g:HTMLPanel tag="span" addStyleNames="{style.generarAutomaticamenteButtons}"><!-- Este span se usa para marcar en rojo ambos radiobuttons -->
+					<g:RadioButton name="automatica" ui:field="generarAutomaticamente">Si</g:RadioButton>
+					<g:RadioButton name="automatica" ui:field="noGenerarAutomaticamente">No</g:RadioButton>
+				</g:HTMLPanel>
+			</g:HTMLPanel>
+			<relaciones:NuevaRelacionAutomatica ui:field="nuevaRelacionAutomatica" />
+			<g:Button ui:field="generar_relacion" visible="false">Generar relación</g:Button>
+		</g:VerticalPanel>
+	</g:ScrollPanel>
+</ui:UiBinder> 

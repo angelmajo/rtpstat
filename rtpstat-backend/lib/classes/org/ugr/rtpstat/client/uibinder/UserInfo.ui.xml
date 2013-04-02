@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.nombreUsuario {
+			font-size: 14px;
+		}	
+	</ui:style>
+	<g:VerticalPanel addStyleNames="{style.nombreUsuario}">
+		<g:cell horizontalAlignment="ALIGN_RIGHT">
+			<!-- <g:Hyperlink targetHistoryToken="editar_usuario"
+				ui:field="nombre_usuario" title="Editar mi perfil" ></g:Hyperlink>-->
+				<g:Label ui:field="nombre_usuario"></g:Label>
+		</g:cell>
+		<g:cell horizontalAlignment="ALIGN_RIGHT">
+			<g:Anchor ui:field="logout" href="logout">Salir</g:Anchor>
+		</g:cell>
+	</g:VerticalPanel>
+</ui:UiBinder> 

@@ -1,0 +1,42 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:problemas="urn:import:org.ugr.rtpstat.client.uibinder.problemas"
+	xmlns:principal="urn:import:org.ugr.rtpstat.client.uibinder.principal">
+	<ui:style>
+		.boton {
+			margin-left: auto;
+			margin-right: auto;
+			width: 15em;
+		}
+		
+		.cargando {
+			left: 1em;
+			position: absolute;
+			top: 0;
+		}
+		
+		.imagen_loader {
+			vertical-align: middle;
+		}
+	</ui:style>
+	<g:DockLayoutPanel unit="EM">
+		<g:north size="2">
+			<g:FlowPanel>
+				<principal:BotonNavegacion ui:field="boton_crear_problema"
+					addStyleNames="{style.boton}" token="crear_problema" textoEnlace="Crear un nuevo problema"
+					title="Crear un nuevo problema" />
+
+				<g:HTMLPanel ui:field="cargando"
+					addStyleNames="{style.cargando}">
+					<g:Image ui:field="imagen_loader" addStyleNames="{style.imagen_loader}" />
+					Cargando problemas...
+				</g:HTMLPanel>
+			</g:FlowPanel>
+		</g:north>
+		<g:center>
+			<g:ScrollPanel>
+				<problemas:ListadoProblemas ui:field="listadoProblemas" />
+			</g:ScrollPanel>
+		</g:center>
+	</g:DockLayoutPanel>
+</ui:UiBinder> 

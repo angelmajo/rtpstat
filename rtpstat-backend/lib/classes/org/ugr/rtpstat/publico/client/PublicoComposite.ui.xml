@@ -1,0 +1,602 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:rtpstat="urn:import:org.ugr.rtpstat.publico.client">
+	<ui:style>
+		.center { /*border-left: 3px solid gray;*/
+			padding: 10px;
+			border-right: 3px solid #D4D5D2;
+			text-align: justify;
+		}
+		
+		.south {
+			border-top: 3px solid #D4D5D2;
+			border-right: 3px solid #D4D5D2;
+		}
+		
+		.north { /*border-bottom: 3px solid gray;*/
+			background-color: #D4D5D2;
+		}
+		
+		.west {
+			background-color: #D4D5D2;
+		}
+		
+		.panel_float_left {
+			float: left;
+			margin: 1em;
+		}
+		
+		.tabla_acerca_de {
+			margin-left: auto;
+			margin-right: auto;
+			border-collapse: collapse;
+		}
+		
+		.img_logo_ugr {
+			vertical-align: sub;
+		}
+		
+		.proyecto_financiado {
+			font-size: 0.75em;
+		}
+		
+		.vicerrectorado {
+			color: #FE370B;
+			font-size: 1.2em;
+			font-variant: small-caps;
+			text-align: center;
+		}
+		
+		.dockpanel {
+			bottom: 0 !important;
+			left: 0 !important;
+			position: fixed !important;
+			top: 0 !important;
+			width: 909px !important;
+		}
+		
+		.entretitulo {
+			font-weight: bold;
+			text-align: center;
+		}
+		
+		.imagen_div {
+			text-align: center;
+		}
+		
+		.imagen {
+			width: 80%;
+		}
+		
+		.lista_bloques {
+			
+		}
+		
+		.lista_bloques li {
+			list-style-type: none;
+		}
+	</ui:style>
+	<g:DockLayoutPanel unit="PX" addStyleNames="{style.dockpanel}">
+		<g:north size="153">
+			<g:FlowPanel addStyleNames="{style.north}">
+				<g:Image ui:field="img_cabecera" />
+			</g:FlowPanel>
+		</g:north>
+		<g:south size="55">
+			<g:HTMLPanel addStyleNames="{style.south}">
+				<g:Image ui:field="img_logo_ugr" addStyleNames="{style.img_logo_ugr}" />
+				<span class="{style.proyecto_financiado}">
+					Financiado por la 
+							</span>
+				<span class="{style.vicerrectorado}">
+					Unidad de Innovación Docente de la Universidad
+					de
+					Granada
+							</span>
+			</g:HTMLPanel>
+		</g:south>
+		<g:west size="110">
+			<g:FlowPanel addStyleNames="{style.west}">
+				<rtpstat:BotonNavegacion token="inicio"
+					textoEnlace="Inicio" />
+				<rtpstat:BotonNavegacion token="acerca_de"
+					textoEnlace="Acerca de" />
+				<rtpstat:BotonNavegacion token="proyectos"
+					textoEnlace="Proyectos" />
+				<rtpstat:BotonNavegacion token="evaluacion"
+					textoEnlace="Evaluación" />
+			</g:FlowPanel>
+		</g:west>
+		<g:center>
+			<g:ScrollPanel addStyleNames="{style.center}">
+				<g:FlowPanel>
+					<g:HTMLPanel ui:field="inicio" visible="false">
+						<p>
+							El grupo de trabajo RTPSTAT te da la bienvenida y desea que el
+							material que ha puesto a disposición de los diferentes tipos de
+							usuarios sea de tu agrado.
+						</p>
+						<p>
+							Se trata de un proyecto ambicioso y dinámico, que irá mejorando
+							con
+							las sugerencias que nos aporten quienes, al fin y al cabo,
+							serán
+							los beneficiarios (esperamos) directos: profesorado y
+							alumnado.
+						</p>
+						<p>
+							Para
+							<g:Anchor ui:field="acceder">acceder</g:Anchor>
+							a la plataforma se requiere una
+							<a target="_blank" href="https://www.google.com/accounts">Cuenta de Google</a>
+						</p>
+					</g:HTMLPanel>
+					<g:HTMLPanel ui:field="acerca_de" visible="false">
+						<p>
+							Acerca de los miembros del equipo RTPSTAT:
+						</p>
+						<table border="1" class="{style.tabla_acerca_de}"
+							cellpadding="15">
+							<tr>
+								<td>
+									<strong>Coordinador</strong>
+								</td>
+								<td>
+									Juan José Serrano Pérez
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<strong>Administrador</strong>
+								</td>
+								<td>
+									Juan Antonio Maldonado Jurado
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<strong>Técnico Plataforma</strong>
+								</td>
+								<td>
+									Juan González Aguilera
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<strong>Componentes equipo proyecto:</strong>
+								</td>
+								<td>
+									Ana María Aguilera del Pino
+									<br />
+									Francisco J. Alonso Morales
+									<br />
+									María José del Moral Ávila
+									<br />
+									Eva María Ramos Ávalos
+									<br />
+									Juan Miguel Tapia García
+									<br />
+									Francisca Gutiérrez Díaz
+								</td>
+							</tr>
+						</table>
+					</g:HTMLPanel>
+					<g:HTMLPanel ui:field="proyectos" visible="false">
+						<p>
+							Los orígenes de RTPSTAT se sitúan en el curso académico
+							2007-2008,
+							fruto del proyecto de innovación docente “Resolución
+							automatizada
+							y tutorizada de problemas de Estadística.
+							Aplicaciones a la
+							Estadística Descriptiva“, financiado por el
+							Vicerrectorado de
+							Planificación, Calidad y Evaluación Docente de
+							la Universidad de
+							Granada. En dicho proyecto presentamos una
+							nueva
+							estrategia
+							docente para la enseñanza práctica de la
+							Estadística,
+							impulsada
+							por el uso de las TIC y basada en el
+							diseño de una
+							novedosa
+							metodología para la obtención automatizada
+							de la
+							resolución
+							pormenorizada de problemas de Estadística que
+							aplicamos
+							a la
+							Estadística Descriptiva implementando
+							“RTPSTAT-Módulo
+							Descriptiva”.
+							</p>
+
+						<p>
+							Dicha metodología es bien simple, al mismo tiempo que original
+							e
+							innovadora, y consiste en generar de forma automática con la
+							ayuda de algún lenguaje de programación estadístico en modo
+							comando un archivo con la resolución detallada del problema
+							dispuesta convenientemente según algún lenguaje para edición de
+							textos en modo comando. 
+							</p>
+
+						<p>
+							“RTPSTAT-Módulo Descriptiva” era una interfaz de usuario,
+							implementada en Visual
+							Basic, que integraba un editor de
+							problemas
+							de Estadística
+							Descriptiva y un generador de
+							presentaciones PDF
+							para su
+							resolución, haciendo uso del lenguaje
+							de programación
+							estadístico
+							R y del lenguaje para edición de
+							textos Latex. Por
+							tanto, nuestra
+							interfaz requiere disponer en
+							nuestro ordenador de R
+							y de Latex,
+							con la clase Beamer y
+							PdfLatex, ambos software libre y
+							de fácil
+							instalación en todo
+							tipo de sistemas.
+							</p>
+
+						<p>
+							A nuestro juicio, y a tenor de las valoraciones de los usuarios
+							de
+							RTPSTAT y de su acogida en diversos foros de innovación
+							docente,
+							RTPSTAT simplifica notablemente la labor docente, y
+							aumenta su
+							efectividad. El atractivo y valor didáctico de las
+							presentaciones
+							generadas facilita la asimilación de conceptos y
+							procedimientos
+							estadísticos, y estimula el trabajo individual de
+							los alumnos.
+							Además, las presentaciones son dinámicas en el
+							sentido de que
+							pueden generarse y actualizarse de forma casi
+							inmediata,
+							aprovechando la potencia de cálculo y gráfica del
+							ordenador,
+							pudiendo responder a nuevas cuestiones o
+							modificaciones
+							de las
+							mismas. Y el alumno puede satisfacer su
+							demanda de problemas
+							resueltos.
+							</p>
+
+						<p>
+							Durante el curso académico 2008-09, en la continuación del
+							proyecto con
+							el mismo título ya referenciado, pretendíamos
+							abordar
+							dos frentes
+							de actuación:
+							</p>
+
+						<ul>
+							<li>
+								La inclusión de nuevas funcionalidades en el sistema que
+								aumentara
+								las fortalezas de RTPSTAT.
+							</li>
+							<li>
+								La evaluación y el seguimiento de la efectividad de la
+								docencia y
+								el aprendizaje con RTPSTAT.
+							</li>
+						</ul>
+						<p>
+							No obstante, y como resultado de una profunda reflexión, nos
+							asaltó
+							una nueva idea. Según las nuevas directrices establecidas
+							para el
+							EEES, los estudios deben focalizarse en las competencias
+							que debe
+							poseer el recién egresado. Desde este punto de vista, y
+							en el
+							contexto de la Estadística, RTPSTAT contribuye notablemente
+							a
+							desarrollar dos de ellas:
+							</p>
+						<ul>
+							<li>la capacidad de aprendizaje autónomo, y</li>
+
+							<li>la capacidad de aplicar el conocimiento en la práctica.</li>
+						</ul>
+						<p> Pero, qué hay de otras competencias como la capacidad de
+							comunicar y hacerse entender, y la capacidad de colaborar y
+							trabajar en equipo, consideradas como unas de las más necesarias
+							de cara al mercado laboral.</p>
+
+						<p> Es evidente que el aprendizaje colaborativo y participativo
+							contribuye a desarrollar tales competencias. Entonces, ¿podríamos
+							dotar a RTPSTAT de esta nueva fortaleza?</p>
+
+						<p> La respuesta no se hizo esperar: si los usuarios pudieran
+							compartir los problemas que crean de forma individual, el
+							aprendizaje colaborativo y participativo estaría garantizado.
+							Cualquiera podría aprender de los problemas planteados por otros
+							alumnos o profesores, y, al mismo tiempo, todos deberían
+							esforzarse por comunicarse adecuadamente en su lengua materna
+							(incluso en lengua extranjera) y en lenguaje técnico (en este
+							caso, matemático). Por otra parte, si pudiéramos recopilar todos
+							los problemas, amablemente cedidos por sus creadores,
+							dispondríamos de una base de conocimiento de incalculable valor.</p>
+
+						<p> Y, ¿cómo hacer todo esto? Sólo hay una respuesta: Web 2.0</p>
+
+						<p>Como algunos ya han afirmado, la web 2.0 o “web de las
+							personas” se podría definir como un conjunto de tecnologías para
+							la creación social de conocimiento, incorporando tres
+							características esenciales: tecnología, conocimiento y usuarios;
+							y se caracteriza por la creación colectiva de contenidos, el
+							establecimiento de recursos compartidos y el control de la
+							calidad de forma colaborativa entre los usuarios. Los nuevos
+							medios de información y comunicación tras la web 2.0, esto es,
+							las TIC 2.0, generan un contexto idóneo para el desarrollo de
+							muchas competencias clave en el nuevo EEES y para la construcción
+							compartida de conocimiento.</p>
+
+						<p> Las aplicaciones didácticas de la Web 2.0 son múltiples:</p>
+						<ul>
+							<li>
+								Es una red social horizontal y abierta, una alternativa a la
+								jerarquía y la comunicación unidireccional tradicional de los
+								entornos formativos. Profesores y alumnos deben asumir nuevos
+								roles orientados al trabajo autónomo y colaborativo, crítico y
+								creativo, la expresión personal, investigar y compartir
+								recursos, aprender y crear conocimiento. 
+							</li>
+							<li>
+								Su riqueza en fuentes de información y canales de
+								comunicación
+								facilita un aprendizaje más autónomo y permite una
+								mayor
+								participación en actividades de grupo, lo que redunda en
+								aumentar el interés y la motivación de los estudiantes.
+							</li>
+							<li>
+								Las numerosas aplicaciones de edición que pone a nuestro
+								servicio permiten elaborar fácilmente materiales de manera
+								individual o en grupo, compartirlos y criticarlos. 
+							</li>
+							<li>
+								Proporciona espacios on-line para el almacenamiento,
+								clasificación y publicación (difusión) de contenidos textuales y
+								audiovisuales, a los que luego todos podrán acceder.
+							</li>
+							<li>
+								Facilita la realización de nuevas actividades de aprendizaje
+								y
+								de evaluación, y la creación de redes de aprendizaje.
+							</li>
+							<li>
+								Desarrolla y mejora las competencias digitales, desde la
+								búsqueda y selección de información, y el proceso para
+								convertirla en conocimiento, hasta su difusión mediante diversos
+								soportes.
+							</li>
+							<li>
+								Proporciona entornos para el desarrollo de redes de centros y
+								profesores donde reflexionar sobre los temas educativos,
+								ayudarse
+								y elaborar y compartir recursos.
+							</li>
+						</ul>
+						<p>
+							Por otra parte, resulta evidente la atracción que ejercen las
+							redes
+							sociales en nuestros alumnos como medio de comunicación y
+							colaboración, y debemos plantearnos la forma de aprovecharlas
+							como plataformas de docencia, creando redes sociales on-line de
+							aprendizaje especializado.
+							</p>
+
+						<p>
+							De este modo, nos propusimos transformar “RTPSTAT – Módulo
+							Descriptiva” en una plataforma web para el aprendizaje
+							colaborativo de la Estadística Descriptiva, sin renunciar, por
+							supuesto, a nuestros objetivos iniciales.
+							</p>
+					</g:HTMLPanel>
+					<g:HTMLPanel ui:field="evaluacion" visible="false">
+						<p> La evaluación interna de RTPSTAT ha sido dinámica, a medida
+							que avanzaba el proyecto. Así, como ha ocurrido con la evaluación
+							por parte del alumnado, se ha evaluado su idoneidad y su
+							necesidad de cambio en sucesivas reuniones de trabajo, tras
+							estudios de casos sobre utilización en primer lugar del entorno
+							interactivo y más tarde de la propia plataforma, para explicar en
+							clase aspectos puntuales de algunos temas. De esta forma se ha
+							podido comprobar y valorar la idoneidad de la estructuración de
+							los elementos constitutivos de la misma así como la utilidad de
+							los formatos de los documentos generados (presentaciones,
+							relaciones y libros). Las críticas por parte de los propios
+							usuarios (profesorado y alumnado), así como las aportaciones
+							continuas de los propios alumnos participantes en el proyecto,
+							que han colaborado en mayor grado y de manera más directa, nos
+							han permitido ir perfeccionando y mejorando la plataforma, que
+							está siendo valorada igualmente, como se indicará en el siguiente
+							punto, por cualquier tipo de usuario.</p>
+						<p> El sentimiento general por parte de los integrantes del equipo
+							de trabajo del proyecto, así como los alumnos colaboradores, es
+							de total satisfacción en la consecución de la mayoría de los
+							objetivos que nos propusimos, algunos de los cuales, por
+							necesidad de propio cambio a web 2.0, quedarán pospuestos a
+							subsiguientes continuaciones del mismo.</p>
+						<p> Estamos especialmente satisfechos de los elementos generados,
+							atendiendo a criterios tan importantes hoy en día como:</p>
+						<ul>
+							<li>el aprendizaje autónomo</li>
+							<li>la transferencia de conocimiento</li>
+							<li>el trabajo colaborativo y participativo en Estadística</li>
+							<li>la adquisición de competencias derivadas de su utilización</li>
+							<li>la utilidad tanto desde el punto de vista del docente como
+								del estudiante</li>
+							<li>etc.</li>
+						</ul>
+						<p>Para la evaluación externa de RTPSTAT se ha diseñado y validado
+							igualmente el cuestionario para recogida de información, que se
+							ha llevado a cabo a dos niveles:</p>
+						<ol>
+							<li>
+								<p>Mediante entrevista personal con cuestionario impreso
+									(alumnos a los que se les ha presentado la plataforma como
+									herramienta docente y que posteriormente la han podido
+									utilizar)</p>
+								<div class="{style.imagen_div}">
+									<g:Image url="/resources/publico/encuesta_fisica.png"
+										addStyleNames="{style.imagen}" />
+								</div>
+							</li>
+
+							<li>
+								<p>
+									Mediante encuesta web. Todo usuario registrado (y aquéllos
+									anónimos a los que se les había suministrado la dirección url
+									de
+									la misma) ha recibido un correo electrónico donde se le
+									informaba de esta posibilidad, de nuestro interés en disponer
+									de
+									su valoración y de nuestro compromiso con el seguimiento y
+									mejora de la plataforma.
+								</p>
+								<p>
+									Se ha utilizado el módulo Spreadsheets de Google, continuando
+									con la idea de utilizar aplicaciones abiertas, como ya lo hemos
+									hecho para la propia plataforma. Los datos se recogen “on line”
+									una vez que el usuario los envía al servidor. La encuesta se
+									encuentra disponible en la siguiente dirección
+								</p>
+								<p>
+									<a
+										href="http://spreadsheets.google.com/viewform?formkey=dDZwYTlxOFBqOG1nanFidjlPMFBrckE6MQ">http://spreadsheets.google.com/viewform?formkey=dDZwYTlxOFBqOG1nanFidjlPMFBrckE6MQ</a>
+								</p>
+								<div class="{style.imagen_div}">
+									<g:Image url="/resources/publico/encuesta_web.png"
+										addStyleNames="{style.imagen}" />
+								</div>
+							</li>
+						</ol>
+						<p>
+							En la actualidad, se disponen de resultados de un total de 12
+							profesores, 47 alumnos y 10 usuarios anónimos.
+							</p>
+
+						<p>
+							Además de la identificación del tipo de usuario (profesor,
+							alumno, usuario anónimo), del organismo/institución, el nivel de
+							uso de la plataforma y los motivos de su utilización, el
+							cuestionario recoge dos bloques de valoración y uno sobre
+							competencias:
+							</p>
+						<ol class="{style.lista_bloques}">
+							<li>
+								<p>
+									Bloque I: Determinación del grado de acuerdo con un conjunto
+									de afirmaciones respecto a RTPSTAT, con una escala
+									1-Ninguno/bajo; 2-Poco/medio; 3-Bastante/alto; 4-Total.
+									</p>
+								<p>
+									Las afirmaciones, ordenadas por valoración media en orden
+									decreciente son las siguientes:
+									</p>
+								<div class="{style.imagen_div}">
+									<g:Image url="/resources/publico/valoraciones_bloque_1.png"
+										addStyleNames="{style.imagen}" />
+								</div>
+							</li>
+							<li>
+								<p>
+									Bloque II: Valoración de 0 a 10 sobre un conjunto de
+									aspectos
+									con relación a RTPSTAT, que presentamos igualmente
+									ordenada por
+									media decreciente:
+									</p>
+								<div class="{style.imagen_div}">
+									<g:Image url="/resources/publico/valoraciones_bloque_2.png"
+										addStyleNames="{style.imagen}" />
+								</div>
+								<p class="{style.entretitulo}">
+									Valoración media obtenida en los diferentes
+									aspectos
+									con
+									relación a RTPSTAT
+									</p>
+								<div class="{style.imagen_div}">
+									<g:Image url="/resources/publico/valoracion_media_bloque_2.png"
+										addStyleNames="{style.imagen}" />
+								</div>
+							</li>
+							<li>
+								<p>
+									Bloque III: Competencias clave en el aprendizaje permanente
+									que el usuario considera que genera RTPSTAT en sus usuarios,
+									presentadas en una pregunta de respuesta múltiple. Como en los
+									dos anteriores, las presentamos ordenadas por porcentajes de
+									respuesta decrecientes:
+								</p>
+								<div class="{style.imagen_div}">
+									<g:Image url="/resources/publico/competencias.png"
+										addStyleNames="{style.imagen}" />
+								</div>
+								<p class="{style.entretitulo}">
+									Competencias clave para el aprendizaje
+									permanente
+								</p>
+								<div class="{style.imagen_div}">
+									<g:Image url="/resources/publico/competencias_clave.png"
+										addStyleNames="{style.imagen}" />
+								</div>
+							</li>
+						</ol>
+						<p>
+							El proceso de recogida de información respecto a la valoración
+							de RTPSTAT es dinámico, lo que supone una continua actualización
+							de resultados, que iremos publicando a medida que se dispongan de
+							ellos.
+						</p>
+						<p>
+							Por el momento, nuestro nivel de satisfacción es alto,
+							teniendo
+							en cuenta los resultados obtenidos hasta ahora. Según se
+							aprecia
+							en las tablas anteriores, los usuarios valoran muy
+							positivamente a
+							RTPSTAT (global 8.87), destacando aspectos como
+							la guía en la
+							resolución de problemas, su utilidad en el proceso
+							de
+							enseñanza/aprendizaje, su capacidad para generar documentos de
+							difícil realización, la capacidad de ir mostrando las técnicas
+							estadísticas “paso a paso” en la resolución de problemas, que
+							consideran no muy accesibles (enorme demanda de problemas
+							resueltos), situando a RTPSTAT como un marco idóneo para el
+							trabajo participativo y colaborativo en Estadística que
+							posibilita la transferencia de conocimiento y el aprendizaje
+							autónomo (tutorizado), siendo así una herramienta destacable en
+							innovación tutorial automatizada.
+						</p>
+						<p>
+							Un apartado de observaciones permitirá ir conociendo un
+							conjunto de sugerencias que, de seguro, nos irá motivando de
+							forma dinámica a mejorar la plataforma y a irla adaptando a las
+							necesidades en todo momento.
+						</p>
+					</g:HTMLPanel>
+				</g:FlowPanel>
+			</g:ScrollPanel>
+		</g:center>
+	</g:DockLayoutPanel>
+</ui:UiBinder> 

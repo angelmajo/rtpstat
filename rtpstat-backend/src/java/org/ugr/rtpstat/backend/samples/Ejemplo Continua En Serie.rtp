@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problema>
+    <descripcion>
+        Ejemplo de funcionamiento para datos en serie de una variable continua.
+    </descripcion>
+    <cabecera>
+    		Los siguientes datos son observaciones de la resistencia al corte, X, en libras, de soldaduras de punto ultrasónicas hechas en un cierto tipo de láminas de duraluminio:
+    </cabecera>
+    <descripcion_variable>
+        Resistencia al corte (en libras) de una soldadura de punto ultrasónica
+    </descripcion_variable>
+    <tipo_variable>
+        Continua
+    </tipo_variable>
+    <organizacion_datos>
+        Serie
+    </organizacion_datos>
+    <cabecera2>
+        Se pide:
+    </cabecera2>    
+    <apartados>
+        <apartado>
+            <enunciado>
+                Determina la distribución de frecuencias de la resistencia al corte de las soldaduras de punto ultrasónicas y promédiala en magnitud con diferentes medidas.
+            </enunciado>
+            <calculos>
+                Tab(X), m1(X), H(X), Q(X), G(X)
+            </calculos>
+        </apartado>
+        <apartado>
+            <enunciado>
+                Cuantifica la dispersión de la resistencia al corte de las soldaduras de punto ultrasónicas con diferentes medidas, así como su dispersión en torno a la resistencia media al corte.
+            </enunciado>
+            <calculos>
+                R(X), Rr(X), RI(X), CA(X), Dm1(X), Sd(X), Var(X), CV(X)
+            </calculos>
+        </apartado>
+        <apartado>
+            <enunciado>
+                Determina:
+            </enunciado>
+            <subapartados>
+                <subapartado>
+                    <enunciado>
+                        La resistencia al corte máxima del 25% de las soldaduras de punto ultrasónicas que presentan menor resistencia al corte, y la resistencia al corte mínima del 20% de las soldaduras de punto ultrasónicas que presentan mayor resistencia al corte.
+                    </enunciado>
+                    <calculos>
+                        Q1(X), P80(X)
+                    </calculos>
+                </subapartado>
+                <subapartado>
+                    <enunciado>
+                        La resistencia al corte que presentan habitualmente las soldaduras de punto ultrasónicas.
+                    </enunciado>
+                    <calculos>
+                        Mo(X)
+                    </calculos>
+                </subapartado>
+                <subapartado>
+                    <enunciado>
+                        El porcentaje de soldaduras de punto que presentan una resistencia al corte mayor o igual que 5485.
+                    </enunciado>
+                    <calculos>
+                        Fx(5485)
+                    </calculos>
+                </subapartado>
+            </subapartados>
+        </apartado>
+        <apartado>
+                <enunciado>
+                    Calcula los momentos no centrales y centrales de órdenes 3 y 4 de la resistencia al corte de las soldaduras de punto ultrasónicas y determina la asimetría y curtosis de su distribución.
+                </enunciado>
+                <calculos>
+                    m3(X), µ3(X), m4(X), µ4(X), Gamma1(X), Gamma2(X)
+                </calculos>
+        </apartado>
+        <apartado>
+             		<enunciado>
+                    Determina la resistencia al corte mediana y proporciona medidas de la dispersión en torno a ella.
+                </enunciado>
+                <calculos>
+                    Me(X), DMe(X), IMe(X)
+                </calculos>
+        </apartado> 
+    </apartados>
+    <notas>
+    		<nota>
+        Recuerde utilizar siempre una precisión mínima de 4 cifras decimales en sus cálculos.
+        </nota>
+        <nota>
+        Recuerde utilizar siempre una precisión mínima de 4 cifras decimales en sus cálculos.
+        </nota>
+    </notas>
+</problema>

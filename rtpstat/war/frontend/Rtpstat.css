@@ -1,0 +1,186 @@
+.align_right {
+	text-align: right;
+}
+
+.campoinvalido {
+	background: white;
+	color: #500;
+	border: 2px solid red !important;
+}
+
+.campo {
+	padding: 0.5em !important;
+	border: 2px solid black;
+	-moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+}
+
+/* Sobreescribiendo GWT */
+.gwt-StackLayoutPanelContent {
+	overflow: auto !important;
+}
+
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelTab {
+	min-width: 1em;
+	-moz-border-radius-topleft: 0.5em;
+	-moz-border-radius-topright: 0.5em;
+	-webkit-border-radius-top-left: 0.5em;
+	-webkit-border-radius-top-right: 0.5em;
+}
+
+.gwt-StackLayoutPanelHeader {
+	font-size: 0.8em !important;
+	text-align: left !important;
+}
+
+.gwt-TabPanel.datosContinua .gwt-TabPanelBottom {
+	border-top: 3px #bcbcbc solid !important;
+	border-left: none !important;
+	border-right: none !important;
+	border-bottom: none !important;
+}
+
+.gwt-Button {
+	-moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+}
+
+.gwt-TextArea,.gwt-TextBox,.gwt-SuggestBox {
+	padding: 0.5em !important;
+	border: 2px solid black;
+	-moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	font-size: 13px;
+}
+
+.gwt-ListBox {
+	font-size: 13px;
+	padding: 0.4em !important;
+	border: 2px solid black;
+	-moz-border-radius-topleft: 0.5em;
+	-webkit-border-radius-topleft: 0.5em;
+	-moz-border-radius-bottomleft: 0.5em;
+	-webkit-border-radius-bottomleft: 0.5em;
+}
+
+.gwt-DecoratorPanel .middleCenter {
+	height: 100%;
+	width: 100%;
+	padding: 0.3em;
+}
+
+.gwt-DisclosurePanel .content {
+	border: none !important;
+}
+
+.gwt-Anchor {
+	cursor: pointer;
+}
+
+/*.gwt-TabLayoutPanel {
+	height: 100%;
+}
+
+.gwt-TabLayoutPanelTab {
+	background: #eee;
+	padding: 0.3em;
+	-moz-border-radius-topleft: 9px;
+	-moz-border-radius-topright: 9px;
+	-webkit-border-radius-topleft: 9px;
+	-webkit-border-radius-topright: 9px;
+}
+
+.gwt-TabLayoutPanelTab.gwt-TabLayoutPanelTab-selected {
+	background: #666;
+	color: white;
+	text-shadow: 0.01em 0.06em 0.05em #333;
+}
+
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelTabs {
+	margin-left: 1em;
+	cursor: pointer;
+}*/
+.gwt-TabBar .gwt-TabBarItem {
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	-webkit-border-radius-topleft: 10px;
+	-webkit-border-radius-topright: 10px;
+}
+
+.gwt-MenuBar .gwt-MenuItem-selected {
+	backgroud: inherit;
+}
+
+.gwt-MenuItem:active {
+	background: white;
+}
+
+.gwt-MenuBar-horizontal .gwt-MenuItem {
+	-moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+}
+
+/*Esquinas redondeadas*/
+.gwt-DecoratorPanel .topLeft {
+	background: url("resources/images/round_corners/top-left.png")
+		transparent !important;
+	background-position: top left !important;
+}
+
+.gwt-DecoratorPanel .topCenter {
+	background: url("resources/images/round_corners/top.png") transparent
+		!important;
+	background-position: center 1px;
+	height: 18px;
+}
+
+.gwt-DecoratorPanel .topRight {
+	background: url("resources/images/round_corners/top-right.png")
+		transparent !important;
+	background-position: top right !important;
+}
+
+.gwt-DecoratorPanel .middleLeft {
+	background: url("resources/images/round_corners/left.png") transparent
+		!important;
+	background-position: left !important;
+}
+
+.gwt-DecoratorPanel .middleLeftInner {
+	width: 18px;
+}
+
+.gwt-DecoratorPanel .middleCenter {
+	/*	background: url("resources/images/round_corners/centro.png") transparent !important;*/
+	
+}
+
+.gwt-DecoratorPanel .middleRight {
+	background: url("resources/images/round_corners/right.png") transparent
+		!important;
+	background-position: right !important;
+	width: 18px;
+}
+
+.gwt-DecoratorPanel .middleRightInner {
+	width: 18px;
+}
+
+.gwt-DecoratorPanel .bottomLeft {
+	background: url("resources/images/round_corners/bottom-left.png")
+		transparent !important;
+	background-position: bottom left !important;
+}
+
+.gwt-DecoratorPanel .bottomCenter {
+	background: url("resources/images/round_corners/bottom.png") transparent
+		!important;
+	background-position: bottom !important;
+	height: 18px;
+}
+
+.gwt-DecoratorPanel .bottomRight {
+	background: url("resources/images/round_corners/bottom-right.png")
+		transparent !important;
+	background-position: bottom right !important;
+}

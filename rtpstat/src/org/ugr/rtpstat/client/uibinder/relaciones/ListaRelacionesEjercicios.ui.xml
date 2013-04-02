@@ -1,0 +1,39 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p="urn:import:org.ugr.rtpstat.client.uibinder.principal">
+	<ui:style>
+		.nueva_relacion {
+			margin-left: auto;
+			margin-right: auto;
+			width: 22em;
+		}
+		
+		.cargando_relaciones {
+			left: 1em;
+			position: absolute;
+			top: 0;
+		}
+		
+		.imagen_loader {
+			vertical-align: middle;
+		}
+	</ui:style>
+	<g:DockLayoutPanel unit="EM">
+		<g:north size="2">
+			<g:FlowPanel>
+				<p:BotonNavegacion token="nueva_relacion_ejercicios"
+					textoEnlace="Crear una nueva relación de problemas" addStyleNames="{style.nueva_relacion}"></p:BotonNavegacion>
+				<g:HTMLPanel ui:field="cargando_libros" visible="false"
+					addStyleNames="{style.cargando_relaciones}">
+					<g:Image ui:field="imagen_loader" addStyleNames="{style.imagen_loader}" />
+					Cargando relaciones...
+				</g:HTMLPanel>
+			</g:FlowPanel>
+		</g:north>
+		<g:center>
+			<g:ScrollPanel>
+				<g:VerticalPanel ui:field="panel_listado" width="100%" />
+			</g:ScrollPanel>
+		</g:center>
+	</g:DockLayoutPanel>
+</ui:UiBinder> 

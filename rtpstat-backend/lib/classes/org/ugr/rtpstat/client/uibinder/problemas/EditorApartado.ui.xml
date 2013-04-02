@@ -1,0 +1,40 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:rtpstat="urn:import:org.ugr.rtpstat.client.uibinder"
+	xmlns:problemas="urn:import:org.ugr.rtpstat.client.uibinder.problemas">
+	<ui:style>
+		
+	</ui:style>
+	<!--<g:DecoratorPanel width="100%">-->
+	<g:HorizontalPanel width="100%" addStyleNames="campo">
+		<g:cell width="24px">
+			<g:PushButton ui:field="mover_arriba"
+				title="Mueve este apartado una posición hacia arriba">Arriba</g:PushButton>
+		</g:cell>
+		<g:cell width="24px">
+			<g:PushButton ui:field="mover_abajo"
+				title="Mueve este apartado una posición hacia abajo">Abajo</g:PushButton>
+		</g:cell>
+		<g:DisclosurePanel animationEnabled="true" width="100%"
+			ui:field="panel">
+			<g:header>
+				Apartado sin descripción
+				</g:header>
+			<g:VerticalPanel spacing="10" width="100%">
+				<g:InlineLabel>Enunciado</g:InlineLabel>
+				<g:TextArea ui:field="enunciado" width="98%"></g:TextArea>
+				<g:HorizontalPanel spacing="4" ui:field="seleccionar_contenido"
+					addStyleNames="campo">
+					<g:RadioButton name="tipo_contenido" ui:field="tiene_calculos">Cálculos</g:RadioButton>
+					<g:RadioButton name="tipo_contenido" ui:field="tiene_subapartados">Subapartados</g:RadioButton>
+				</g:HorizontalPanel>
+				<problemas:ListadoApartados ui:field="listado_subapartados"
+					visible="false" />
+				<problemas:EditorCalculos ui:field="calculos"
+					visible="false" />
+				<g:PushButton ui:field="eliminar" width="4em" title="Eliminar">Eliminar</g:PushButton>
+			</g:VerticalPanel>
+		</g:DisclosurePanel>
+	</g:HorizontalPanel>
+	<!--</g:DecoratorPanel>-->
+</ui:UiBinder> 

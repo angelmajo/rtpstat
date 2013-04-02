@@ -1,0 +1,70 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.recuadro {
+			-moz-border-radius: 1em;
+			border: 1px dashed black;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 3em;
+			padding: 1em;
+			width: 80%;
+			background-color: #F4F6F4;
+		}
+		
+		.saludoInicial {
+			font-size: 2em;
+			text-align: center;
+			background-color: #444;
+			color: #fff;
+		}
+		
+		.institucion {
+			border-bottom: 0.05em black dotted;
+		}
+		
+		.obligatorio {
+			vertical-align: middle;
+			cursor: pointer;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Label addStyleNames="{style.saludoInicial}">¡Bienvenido a RTPSTAT!</g:Label>
+		<g:HTMLPanel addStyleNames="{style.recuadro}">
+			<g:Label>Para poder acceder a la plataforma de RTPSTAT tienes que
+				completar un sencillo registro:</g:Label>
+			<table width="98%">
+				<col></col>
+				<col width="68%"></col>
+				<tr>
+					<td>
+						¿Cual es tu nombre? <g:Image addStyleNames="{style.obligatorio}" ui:field="nombreObligatorio" title="El nombre es obligatorio y tiene que tener al menos tres caracteres"></g:Image>
+						</td>
+					<td>
+						<g:TextBox width="100%" ui:field="nombre_real"></g:TextBox>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						¿A que
+						<span class="{style.institucion}" title="Universidad/Instituto/Colegio/Asociación/etc...">institución</span>
+						perteneces? <g:Image addStyleNames="{style.obligatorio}" ui:field="institucionObligatoria" title="Tienes que seleccionar la entidad a la que perteneces"></g:Image>
+					</td>
+					<td>
+						<g:SuggestBox width="100%" ui:field="institucion"></g:SuggestBox>
+					</td>
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td align="center">
+						<g:Button ui:field="boton_registrar" enabled="false">¡Registrarme!</g:Button>
+					</td>
+				</tr>
+			</table>
+
+
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

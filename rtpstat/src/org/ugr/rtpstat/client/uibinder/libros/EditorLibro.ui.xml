@@ -1,0 +1,87 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:rtpstat="urn:import:org.ugr.rtpstat.client.uibinder">
+	<ui:style type="org.ugr.rtpstat.client.uibinder.libros.EditorLibro.Estilo">
+		.topPanel {
+			width: 100%;
+			padding-top: 0.4em;
+			padding-left: 1em;
+			padding-right: 1em;
+		}
+		
+		.descripcionTexto {
+			width: 7em;
+		}
+		
+		.titulo {
+			width: 100%;
+			max-width: 96%;
+		}
+		
+		.num_capitulosTexto {
+			width: 10em;
+		}
+		
+		.disabled {
+			color: #EEEEEE !important;
+			text-shadow: 0.05em 0.05em 0.05em white;
+		}
+		
+		.invalido {
+			color: red;
+		}
+		
+		.invalido:AFTER {
+			content: "!";
+			font-size: 0.5em;
+			vertical-align: super;
+			text-shadow: 0.05em 0.05em 0.1em white;
+			font-weight: bold;
+		}
+		
+		.textoGris {
+			color: gray;
+		}
+	</ui:style>
+	<g:DockLayoutPanel unit="EM">
+		<g:north size="5.5">
+			<g:FlowPanel>
+				<g:MenuBar>
+					<g:MenuItem ui:field="guardar" addStyleNames="{style.disabled}">
+						Guardar
+					</g:MenuItem>
+					<g:MenuItem>
+						Áreas Objetivo
+						<g:MenuBar vertical="true" ui:field="menu_areas_objetivo">
+							<g:MenuItem>
+								Cargando áreas objetivo...
+							</g:MenuItem>
+						</g:MenuBar>
+					</g:MenuItem>
+				</g:MenuBar>
+				<g:HorizontalPanel addStyleNames="{style.topPanel}">
+					<!--
+						<g:cell verticalAlignment="ALIGN_MIDDLE"> <g:Label
+						addStyleNames="{style.descripcionTexto}">Título del
+						Libro:</g:Label> </g:cell>
+					-->
+					<g:cell width="100%" verticalAlignment="ALIGN_MIDDLE">
+						<rtpstat:AdvancedTextBox ui:field="titulo"
+							addStyleNames="{style.titulo}" mensaje="Título del libro, obligatorio"
+							mensajeStyle="{style.textoGris}" />
+					</g:cell>
+					<g:cell verticalAlignment="ALIGN_MIDDLE">
+						<g:Label addStyleNames="{style.num_capitulosTexto}">Número de capítulos:</g:Label>
+					</g:cell>
+					<g:cell verticalAlignment="ALIGN_MIDDLE">
+						<g:ListBox ui:field="numero_capitulos" enabled="false" />
+					</g:cell>
+				</g:HorizontalPanel>
+			</g:FlowPanel>
+		</g:north>
+		<g:center>
+			<g:TabLayoutPanel ui:field="capitulos" barUnit="EM"
+				barHeight="2" />
+		</g:center>
+	</g:DockLayoutPanel>
+</ui:UiBinder> 

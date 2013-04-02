@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<problema>
+    <descripcion>
+        Ejemplo de funcionamiento con datos en serie de una variable discreta
+    </descripcion>
+    <cabecera>
+        Los circuitos integrados se construyen sobre obleas de silicio, que son discos de 20 a 30 centímetros de diámetro y muy poco espesor, entre 200 y 500 micras. La cantidad de partículas contaminantes, X, en una muestra de 100 obleas de silicio, antes de cierto proceso de lavado, fueron:
+    </cabecera>
+    <descripcion_variable>
+        Cantidad de partículas contaminantes en una oblea de silicio
+    </descripcion_variable>
+    <tipo_variable>
+        Discreta
+    </tipo_variable>
+    <organizacion_datos>
+        Serie
+    </organizacion_datos>
+    <cabecera2>
+    </cabecera2>
+    <apartados>
+        <apartado>
+            <enunciado>
+                Calcula el número medio de partículas contaminantes en una oblea de silicio y cuantifica con diferentes medidas la dispersión de la cantidad de partículas contaminantes alrededor de ella
+            </enunciado>
+            <calculos>
+                m1(X), Dm1(X), Sd(X), Var(X), CV(X), Rr(X), CA(X)
+            </calculos>
+        </apartado>
+        <apartado>
+            <enunciado>
+                Determina:
+            </enunciado>
+            <subapartados>
+                <subapartado>
+                    <enunciado>
+                        El número de partículas contaminantes que presentan como máximo y como mínimo más de la mitad de las obleas y cuantifica la dispersión respecto de él.
+                    </enunciado>
+                    <calculos>
+                        Me(X), DMe(X), IMe(X)
+                    </calculos>
+                </subapartado>
+                <subapartado>
+                    <enunciado>
+                        El número máximo de partículas contaminantes que presentan el 18% de las obleas de silicio con menor contenido de partículas contaminantes.
+                    </enunciado>
+                    <calculos>
+                        P18(X)
+                    </calculos>
+                </subapartado>
+                <subapartado>
+                    <enunciado>
+                        El número mínimo de partículas contaminantes que presentan el 25% de las obleas de silicio con mayor contenido de partículas contaminantes.
+                    </enunciado>
+                    <calculos>
+                        P75(X)
+                    </calculos>
+                </subapartado>
+                <subapartado>
+                    <enunciado>
+                        El porcentaje de obleas de silicio que presentan menos de 10 partículas contaminantes.
+                    </enunciado>
+                    <calculos>
+                        Fx(9)
+                    </calculos>
+                </subapartado>
+            </subapartados>
+        </apartado>
+        <apartado>
+            <enunciado>
+                Determina la cantidad de partículas contaminantes más frecuente en una oblea de silicio.
+            </enunciado>
+            <calculos>
+                Mo(X)
+            </calculos>
+        </apartado>
+        <apartado>
+            <enunciado>
+                Calcula los momentos no centrales y centrales de órdenes 3 y 4 de la cantidad de partículas contaminantes y determina su asimetría y curtosis.
+            </enunciado>
+            <calculos>
+                m3(X), µ3(X), m4(X), µ4(X), Gamma1(X), Gamma2(X)
+            </calculos>
+        </apartado>
+    </apartados>
+    <notas>
+        <nota>
+            Recuerde utilizar siempre una precisión mínima de 4 cifras decimales en sus cálculos.
+        </nota>
+    </notas>
+</problema>

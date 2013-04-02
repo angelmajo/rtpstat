@@ -1,0 +1,81 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:rtpstat="urn:import:org.ugr.rtpstat.client.uibinder.problemas.datos">
+	<ui:style type="org.ugr.rtpstat.client.uibinder.problemas.datos.EditorDatos.Estilos">
+		.anchoTotal {
+			width: 100%;
+		}
+		
+		.anchoTotal2 {
+			width: 98%;
+		}
+		
+		.opciones {
+			width: 11em;
+		}
+		
+		.opcionseleccionada {
+			font-weight: bold;
+		}
+		
+		.borderBottom {
+			border-bottom: 1px solid black;
+			font-style: italic;
+			font-variant: small-caps;
+		}
+	</ui:style>
+	<g:VerticalPanel addStyleNames="{style.anchoTotal}">
+		<g:VerticalPanel addStyleNames="{style.anchoTotal}">
+			<g:Label>Descripción de la variable:</g:Label>
+			<g:TextArea ui:field="descripcion_variable" visibleLines="4" addStyleNames="{style.anchoTotal2}"></g:TextArea>
+		</g:VerticalPanel>
+		<g:HorizontalPanel spacing="5" addStyleNames="{style.anchoTotal}">
+			<g:VerticalPanel ui:field="detalles_tipo_variable" styleName="campo">
+				<g:cell>
+					<g:VerticalPanel>
+						<g:cell>
+							<g:Label addStyleNames="{style.borderBottom}">Tipo</g:Label>
+						</g:cell>
+						<g:VerticalPanel>
+							<g:RadioButton name="tipo_variable" ui:field="tipo_continua">Continua</g:RadioButton>
+							<g:HTMLPanel ui:field="precision_container" visible="false">
+								<g:ListBox ui:field="precision"></g:ListBox>
+							</g:HTMLPanel>
+						</g:VerticalPanel>
+						<g:RadioButton name="tipo_variable" ui:field="tipo_discreta">Discreta</g:RadioButton>
+					</g:VerticalPanel>
+				</g:cell>
+				<g:cell>
+					<g:VerticalPanel>
+						<g:cell>
+							<g:Label addStyleNames="{style.borderBottom}">Organización</g:Label>
+						</g:cell>
+						<g:RadioButton name="organizacion_variable" ui:field="organizacion_serie">Serie</g:RadioButton>
+						<g:RadioButton name="organizacion_variable" ui:field="organizacion_tabla">Tabla</g:RadioButton>
+					</g:VerticalPanel>
+				</g:cell>
+			</g:VerticalPanel>
+			<g:cell width="100%">
+				<g:VerticalPanel addStyleNames="{style.anchoTotal}">
+					<g:cell verticalAlignment="ALIGN_TOP">
+						<rtpstat:EditorDatosContinuaSerie ui:field="editor_continua_serie" visible="false"
+							addStyleNames="campo {style.anchoTotal}" />
+					</g:cell>
+					<g:cell verticalAlignment="ALIGN_TOP">
+						<rtpstat:EditorDatosContinuaTabla ui:field="editor_continua_tabla" visible="false"
+							addStyleNames="campo {style.anchoTotal}" />
+					</g:cell>
+					<g:cell verticalAlignment="ALIGN_TOP">
+						<rtpstat:EditorDatosDiscretaSerie ui:field="editor_discreta_serie" visible="false"
+							addStyleNames="campo {style.anchoTotal}" />
+					</g:cell>
+					<g:cell verticalAlignment="ALIGN_TOP">
+						<rtpstat:EditorDatosDiscretaTabla ui:field="editor_discreta_tabla" visible="false"
+							addStyleNames="campo {style.anchoTotal}" />
+					</g:cell>
+				</g:VerticalPanel>
+			</g:cell>
+		</g:HorizontalPanel>
+
+	</g:VerticalPanel>
+</ui:UiBinder> 

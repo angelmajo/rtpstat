@@ -1,0 +1,35 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.flecha-izquierda {
+			padding-left: 1em;
+			padding-top: 1em;
+		}
+		
+		.padding-selecciona {
+			padding-left: 10em;
+		}
+		
+		.centrado {
+			font-variant: small-caps;
+			text-align: center;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:HTMLPanel ui:field="mensajeUsuarioNoAutorizado" visible="false" addStyleNames="{style.centrado}">
+			<p>Tu cuenta aún no ha sido validada por ningún
+				administrador.</p>
+			<p>Muy pronto revisaremos tu solicitud y recibiras un
+				correo
+				electrónico informandote.</p>
+		</g:HTMLPanel>
+		<g:HTMLPanel ui:field="instrucciones_iniciales" visible="false">
+			<g:Image ui:field="flecha_izquierda" ui:styleName="{style.flecha-izquierda}"></g:Image>
+			<g:Label ui:styleName="{style.padding-selecciona}" ui:field="mensajePrincipal">
+				Selecciona alguna acción en el menú
+				de la
+				izquierda
+							</g:Label>
+		</g:HTMLPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

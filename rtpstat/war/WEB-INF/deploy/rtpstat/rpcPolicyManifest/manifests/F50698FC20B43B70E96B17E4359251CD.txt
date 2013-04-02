@@ -1,0 +1,2 @@
+serviceClass: org.ugr.rtpstat.client.RtpstatService
+path: 5A7F4EFC6B421FBCA74DC3A98C3BE800.gwt.rpc

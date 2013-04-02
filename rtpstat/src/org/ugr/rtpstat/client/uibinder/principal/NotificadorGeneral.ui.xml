@@ -1,0 +1,57 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style type="org.ugr.rtpstat.client.uibinder.principal.NotificadorGeneral.Estilo">
+		.contenedor {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+			padding: 0.3em;
+			border-style: dotted;
+			border-width: 2px 2px 0 0;
+			-moz-border-radius-topright: 0.7em;
+			background-color: beige;
+		}
+		
+		.warning {
+			color: #D82921;
+			border-color: #D82921;
+		}
+		
+		.info {
+			color: #29D821;
+			border-color: #29D821;
+		}
+		
+		.pointer {
+			cursor: pointer;
+		}
+		
+		.alignRight {
+			text-align: right;
+		}
+		
+		.maxSize {
+			max-height: 10em;
+			max-width: 40em;
+		}
+		
+		.blinking {
+			border-color: gray;
+			background-color: white;
+		}
+	</ui:style>
+	<g:VerticalPanel ui:field="panelExterno" addStyleNames="{style.contenedor}" visible="false">
+		<g:HTMLPanel addStyleNames="{style.alignRight}">
+			<g:Image ui:field="minimizar" addStyleNames="{style.pointer}" title="Minimizar panel de notificaciones"></g:Image>
+			<g:Image ui:field="restaurar" addStyleNames="{style.pointer}" title="Mostrar solo la ultima notificación"></g:Image>
+			<g:Image ui:field="expandir" addStyleNames="{style.pointer}" title="Mostrar todas las notificaciones"></g:Image>
+		</g:HTMLPanel>
+		<g:ScrollPanel addStyleNames="{style.maxSize}">
+			<g:HTMLPanel>
+				<g:HTML ui:field="ultimoMensaje" />
+				<g:VerticalPanel ui:field="panel" width="100%" />
+			</g:HTMLPanel>
+		</g:ScrollPanel>
+	</g:VerticalPanel>
+</ui:UiBinder> 

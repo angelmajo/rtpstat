@@ -1,0 +1,43 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:rtpstat="urn:import:org.ugr.rtpstat.client.uibinder">
+	<ui:style type="org.ugr.rtpstat.client.uibinder.FloatTextBox.Styles">
+		.minipadding {
+			pading-right: 1em;
+		}
+		
+		.campoerroneo {
+			background-color: #faa;
+		}
+	</ui:style>
+	<g:HorizontalPanel spacing="3" width="100%" ui:field="panel">
+		<g:cell verticalAlignment="ALIGN_MIDDLE" horizontalAlignment="ALIGN_RIGHT">
+			<g:Label ui:field="posicion" width="3em"></g:Label>
+		</g:cell>
+		<g:cell verticalAlignment="ALIGN_MIDDLE" width="5em" class="{style.minipadding}">
+			<g:MenuBar ui:field="menu">
+				<g:MenuItem>
+					<span title="Insertar registros despues de este">+</span>
+					<g:MenuBar vertical="true">
+						<g:MenuItem ui:field="insertar_uno">
+							Insertar 1
+						</g:MenuItem>
+						<g:MenuItem ui:field="insertar_varios">
+							Insertar N
+						</g:MenuItem>
+					</g:MenuBar>
+				</g:MenuItem>
+				<g:MenuItem ui:field="menu_eliminar">
+					<span title="Eliminar esta fila">-</span>
+					<g:MenuBar vertical="true">
+						<g:MenuItem ui:field="eliminar">Eliminar fila</g:MenuItem>
+						<g:MenuItem ui:field="eliminar_todas">Eliminar todas</g:MenuItem>
+					</g:MenuBar>
+				</g:MenuItem>
+			</g:MenuBar>
+		</g:cell>
+		<g:cell verticalAlignment="ALIGN_MIDDLE" width="100%">
+			<rtpstat:NumberTextBox ui:field="text_box" width="95%"></rtpstat:NumberTextBox>
+		</g:cell>
+	</g:HorizontalPanel>
+</ui:UiBinder> 

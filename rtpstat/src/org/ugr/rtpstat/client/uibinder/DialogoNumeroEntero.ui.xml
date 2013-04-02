@@ -1,0 +1,23 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		
+	</ui:style>
+	<g:VerticalPanel>
+		<g:HorizontalPanel>
+			<g:cell verticalAlignment="ALIGN_MIDDLE">
+				<g:Label>Seleccione el valor:</g:Label>
+			</g:cell>
+			<g:ListBox visibleItemCount="5" ui:field="valores"></g:ListBox>
+		</g:HorizontalPanel>
+		<g:HorizontalPanel width="100%">
+			<g:cell horizontalAlignment="ALIGN_LEFT">
+				<g:Button ui:field="cancelar">Cancelar</g:Button>
+			</g:cell>
+			<g:cell horizontalAlignment="ALIGN_RIGHT">
+				<g:Button ui:field="aceptar">Aceptar</g:Button>
+			</g:cell>
+		</g:HorizontalPanel>
+	</g:VerticalPanel>
+</ui:UiBinder> 

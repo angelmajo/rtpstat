@@ -1,0 +1,22 @@
+﻿<datos>
+	<tipo>
+		continua_tabla
+	</tipo>	
+	<extremos_inferiores>
+            10
+            30
+            40
+            50
+            60
+	</extremos_inferiores>
+	<ultimo_superior>
+            90
+	</ultimo_superior>
+  <frecuencias>
+            15
+            22
+            48
+            40
+            25
+	</frecuencias>
+</datos>

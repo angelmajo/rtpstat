@@ -1,0 +1,27 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder" xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:rtpstat="urn:import:org.ugr.rtpstat.client.uibinder">
+	<ui:style>
+		
+	</ui:style>
+	<g:HTMLPanel>
+		<table cellspacing="10">
+			<tr>
+				<td>
+					<g:Label>¿Cuantos problemas quieres de cada grado de dificultad?</g:Label>
+				</td>
+				<td>
+					<g:Label>¿A quién está destinada esta relación?</g:Label>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top">
+					<g:VerticalPanel ui:field="descripcionProblemas"></g:VerticalPanel>
+				</td>
+				<td valign="top">
+					<g:ListBox multipleSelect="true" ui:field="areas_objetivo" visibleItemCount="7"></g:ListBox>
+				</td>
+			</tr>
+		</table>
+	</g:HTMLPanel>
+</ui:UiBinder> 

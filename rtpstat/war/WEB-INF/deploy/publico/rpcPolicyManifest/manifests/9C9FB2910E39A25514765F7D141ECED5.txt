@@ -1,0 +1,2 @@
+serviceClass: org.ugr.rtpstat.publico.client.PublicoService
+path: 324A5C08D51877889F03A8B9E01C52A9.gwt.rpc

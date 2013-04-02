@@ -1,0 +1,115 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:rtpstat="urn:import:org.ugr.rtpstat.client.uibinder"
+	xmlns:registro="urn:import:org.ugr.rtpstat.client.uibinder.registro"
+	xmlns:admin="urn:import:org.ugr.rtpstat.client.uibinder.admin"
+	xmlns:comun="urn:import:org.ugr.rtpstat.client.uibinder.principal"
+	xmlns:gestor="urn:import:org.ugr.rtpstat.client.uibinder.relaciones">
+	<ui:style>
+		.cabecera {
+			background-color: #D4D5D2;
+			color: black;
+		}
+		
+		.cabecera a {
+			color: black;
+		}
+		
+		.center {
+		}
+		
+		.sidebar {
+			background-color: #D4D5D2;
+			padding-top: 0.5em;
+		}
+		
+		.alpha {
+			font-size: xx-large;
+		}
+		
+		.issueTracker {
+			font-size: 0.8em;
+			text-shadow: none;
+		}
+		
+		.issueTracker a {
+			text-decoration: underline;
+		}
+		
+		.logotipo {
+			margin: 5px;
+		}
+		
+		.titulo {
+			font-size: 1.6em;
+			margin-bottom: -0.1em;
+			margin-top: -0.1em;
+			color: #D82921;
+			text-shadow: 2px 2px 3px white, 4px 4px 3px wheat;
+			letter-spacing: 0.5em;
+			font-weight: bold;
+		}
+		
+		.subtitulo {
+			font-size: 0.8em;
+			margin-left: 0.1em;
+			margin-top: -0.3em;
+			text-transform: uppercase;
+		}
+		
+		.letrasResaltadasTitulo {
+			color: #FF2222;
+			font-size: 1.3em;
+		}
+	</ui:style>
+	<g:FlowPanel ui:field="panel_principal" width="320px">
+		<g:HorizontalPanel ui:field="cabecera" ui:styleName="{style.cabecera}"
+			width="100%" height="3.5em">
+			<g:cell width="50px">
+				<g:HTMLPanel>
+					<a href="#">
+						<g:Image addStyleNames="{style.logotipo}" ui:field="logotipo"></g:Image>
+					</a>
+				</g:HTMLPanel>
+			</g:cell>
+			<g:VerticalPanel>
+				<g:Label addStyleNames="{style.titulo}">
+					RTPSTAT
+				</g:Label>
+			</g:VerticalPanel>
+			<!--<g:cell horizontalAlignment="ALIGN_CENTER" verticalAlignment="ALIGN_MIDDLE">
+				<g:HTMLPanel>
+					¿Problemas? ¿Sugerencias?
+					<g:Anchor href="http://code.google.com/p/rtpstat/issues/entry"
+						target="_blank">
+						¡Cuéntanoslo!</g:Anchor>
+				</g:HTMLPanel>
+			</g:cell>-->
+			<rtpstat:UserInfo width="90%" ui:field="userInfo" />
+		</g:HorizontalPanel>
+
+
+		<g:HTMLPanel addStyleNames="{style.sidebar}" width="100%">
+			<g:VerticalPanel ui:field="sidebar_izq" width="100%">
+				<comun:BotonNavegacion ui:field="boton_crear_problema"
+					token="crear_problema" textoEnlace="Nuevo problema" title="Crear un nuevo problema" />
+				<!--
+					<comun:BotonNavegacion ui:field="boton_feed_oficial"
+					token="feed_oficial" textoEnlace="Feed oficial"/>
+				-->
+				<comun:BotonNavegacion ui:field="boton_mis_problemas"
+					token="mis_problemas" textoEnlace="Mis Problemas" title="Acceder a Mis Problemas" />
+				<comun:BotonNavegacion ui:field="boton_relaciones_ejercicios"
+					token="mis_relaciones" textoEnlace="Mis Relaciones"
+					title="Gestionar relaciones de problemas" />
+				<comun:BotonNavegacion ui:field="boton_mis_libros"
+					token="mis_libros" textoEnlace="Mis Libros" title="Gestionar mis libros" />
+				<comun:BotonNavegacion ui:field="boton_autorizar_usuarios"
+					token="autorizar_usuarios" textoEnlace="Autorizaciones"
+					title="Gestionar los permisos de los usuarios" />
+			</g:VerticalPanel>
+		</g:HTMLPanel>
+
+		<g:FlowPanel ui:field="panel_centro" addStyleNames="{style.center}" />
+	</g:FlowPanel>
+</ui:UiBinder> 
