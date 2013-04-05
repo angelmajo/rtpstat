@@ -3,7 +3,6 @@ package org.ugr.rtpstat.server.orm;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.logging.Logger;
 
 import javax.jdo.PersistenceManager;
@@ -242,11 +241,11 @@ public class ProblemaEnStore implements IsSerializable {
 		return key;
 	}
 
-	public void setApartadosEnStore(List<ApartadoEnStore> apartadosEnStore) {
+	public void setApartadosEnStore(LinkedList<ApartadoEnStore> apartadosEnStore) {
 		this.apartadosEnStore = apartadosEnStore;
 	}
 
-	public List<ApartadoEnStore> getApartadosEnStore() {
+	public LinkedList<ApartadoEnStore> getApartadosEnStore() {
 		return apartadosEnStore;
 	}
 }
