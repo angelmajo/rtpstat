@@ -5,3 +5,4 @@ rtpstat/.gwt/
 rtpstat/war/rtpstat/
 rtpstat/war/publico/
 rtpstat/war/WEB-INF/deploy
+rtpstat/war/WEB-INF/appengine-generated
