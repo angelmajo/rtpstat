@@ -22,10 +22,11 @@ import org.ugr.rtpstat.server.PMF;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.users.User;
 import com.google.appengine.api.users.UserServiceFactory;
+import com.google.gwt.user.client.rpc.IsSerializable;
 
 //Duplica totalmente la clase Problema, pero resulta comodo y es necesario en parte
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
-public class ProblemaEnStore {
+public class ProblemaEnStore implements IsSerializable {
 	private static Logger logger;
 	{
 		logger = Logger.getLogger(ProblemaEnStore.class.getSimpleName());
@@ -47,7 +48,7 @@ public class ProblemaEnStore {
 	private DatosEnStore datos;
 
 	@Persistent(serialized="true")
-	private List<ApartadoEnStore> apartadosEnStore;
+	private LinkedList<ApartadoEnStore> apartadosEnStore;
 
 	@Persistent
 	private Date ultimaActualizacion;

@@ -16,9 +16,10 @@ import org.ugr.rtpstat.client.orm.ApartadoConSubApartados;
 import org.ugr.rtpstat.client.orm.Calculo;
 
 import com.google.appengine.api.datastore.Key;
+import com.google.gwt.user.client.rpc.IsSerializable;
 
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
-public class ApartadoEnStore {
+public class ApartadoEnStore implements IsSerializable{
 
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)

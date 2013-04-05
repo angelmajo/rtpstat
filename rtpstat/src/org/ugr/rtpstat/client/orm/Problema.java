@@ -1,8 +1,10 @@
 package org.ugr.rtpstat.client.orm;
 
-import com.google.gwt.user.client.rpc.IsSerializable;
+import java.io.Serializable;
 
-public class Problema implements IsSerializable, IsValidable {
+public class Problema implements Serializable, IsValidable {
+  private static final long serialVersionUID = -8222343292051775164L;
+
   private static final String DEFAULT_STRING = "DEFAULT";
 
   protected String descripcion;

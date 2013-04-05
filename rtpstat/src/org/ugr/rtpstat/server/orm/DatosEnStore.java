@@ -11,9 +11,10 @@ import org.ugr.rtpstat.client.orm.Datos.TipoAmplitudIntervalos;
 import org.ugr.rtpstat.client.orm.Datos.TipoVariable;
 
 import com.google.appengine.api.datastore.Key;
+import com.google.gwt.user.client.rpc.IsSerializable;
 
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
-public class DatosEnStore /*extends Datos*/ {
+public class DatosEnStore implements IsSerializable {
 	@PrimaryKey
 	@Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
 	protected Key key;
