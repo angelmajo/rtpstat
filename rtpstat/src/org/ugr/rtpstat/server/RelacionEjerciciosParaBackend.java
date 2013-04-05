@@ -9,7 +9,6 @@ import org.ugr.rtpstat.client.orm.TipoRelacion;
 
 public class RelacionEjerciciosParaBackend extends RelacionEjercicios {
 	private static final String lineSeparator = "\r\n";
-	private static final long serialVersionUID = -3643527205135576181L;
 	private String[] tokens;
 	private String carpetaRepositorio = null;
 

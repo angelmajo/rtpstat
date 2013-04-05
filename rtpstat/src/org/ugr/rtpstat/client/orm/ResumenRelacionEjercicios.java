@@ -1,9 +1,8 @@
 package org.ugr.rtpstat.client.orm;
 
-import java.io.Serializable;
+import com.google.gwt.user.client.rpc.IsSerializable;
 
-public class ResumenRelacionEjercicios implements Serializable {
-	private static final long serialVersionUID = 1378885653091414823L;
+public class ResumenRelacionEjercicios implements IsSerializable {
 	private long id;
 	private String titulo;
 	private String[] areasObjetivo;

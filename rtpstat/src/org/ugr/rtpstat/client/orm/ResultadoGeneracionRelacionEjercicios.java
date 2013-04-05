@@ -1,10 +1,10 @@
 package org.ugr.rtpstat.client.orm;
 
-import java.io.Serializable;
 import java.util.HashMap;
 
-public class ResultadoGeneracionRelacionEjercicios implements Serializable {
-	private static final long serialVersionUID = -3941967715087022682L;
+import com.google.gwt.user.client.rpc.IsSerializable;
+
+public class ResultadoGeneracionRelacionEjercicios implements IsSerializable{
 	private HashMap<GradoDificultad, Integer> problemas = new HashMap<GradoDificultad, Integer>();
 	private long idRelacion;
 

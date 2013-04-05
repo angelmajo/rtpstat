@@ -1,8 +1,8 @@
 package org.ugr.rtpstat.client.orm;
 
-import java.io.Serializable;
+import com.google.gwt.user.client.rpc.IsSerializable;
 
-public class Datos implements Serializable, IsValidable {
+public class Datos implements IsSerializable, IsValidable {
 	public static enum TipoAmplitudIntervalos {
 		CONSTANTE, VARIABLE
 	};
@@ -11,7 +11,6 @@ public class Datos implements Serializable, IsValidable {
 		CONTINUA_SERIE, CONTINUA_TABLA, DISCRETA_SERIE, DISCRETA_TABLA
 	}
 
-	private static final long serialVersionUID = -7455771903685429658L;
 	private static final String DEFAULT_STRING = "DEFAULT";
 
 	private TipoVariable tipoVariable;

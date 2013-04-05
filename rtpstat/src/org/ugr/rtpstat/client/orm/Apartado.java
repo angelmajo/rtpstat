@@ -1,10 +1,8 @@
 package org.ugr.rtpstat.client.orm;
 
-import java.io.Serializable;
+import com.google.gwt.user.client.rpc.IsSerializable;
 
-public class Apartado implements Serializable, IsValidable{
-	private static final long serialVersionUID = -3660691225891513502L;
-	
+public class Apartado implements IsSerializable, IsValidable{
 	private String enunciado;
 	public void setEnunciado(String enunciado) {
 		this.enunciado = enunciado;
